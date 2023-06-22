@@ -1,0 +1,16 @@
+.experiences {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Pour occuper toute la hauteur de l'écran */
+  }
+
+.web-logo-card{
+    color: white;
+    font-size: 35px;
+}
+
+.art-logo-card{
+    color: white;
+    font-size: 35px;
+}

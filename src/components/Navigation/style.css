@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap');
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3%;
+}
+
+.main-nav-top{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+    text-shadow: 0 0 60px rgba(202,228,225,0.8);
+    text-decoration: none;
+    transition: transform 0.5s ease-in-out;
+}
+
+.main-nav-top:hover{
+    filter:  drop-shadow(0 0 40px white) ;
+}
+
+.main-nav-menu{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+    text-shadow: 0 0 60px rgba(202,228,225,0.8);
+    text-decoration: none;
+    background-color: black;
+    cursor: pointer;
+    border-style: none;
+}
+
+.main-nav-menu:hover {
+    position: relative;
+}
+
+.main-nav-menu:hover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    animation: underline 0.5s forwards;
+}
+
+
+@keyframes underline {
+    0% {
+        width: 0;
+        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
+    }
+    100% {
+        width: 100%;
+        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
+    }
+}
+.fa-sitemap{
+    color: white;
+    margin-right: 5px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.fa-sitemap:hover{
+    transform: rotate(180deg);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .modal-menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .modal-text {
+    text-decoration: none;
+    font-family: 'Share Tech', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 12vw;
+    font-weight: 400;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .modal-text:hover {
+    filter: blur(10px);
+}
+  
+  .modal-close {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }

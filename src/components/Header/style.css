@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap');
+
+
+h1 {
+    text-align: center;
+    margin: 1%;
+    font-size: 120px;
+    font-weight: 800;
+    font-family: 'Inter Tight', sans-serif;
+    color: white;
+    letter-spacing: -5px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Share Tech', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.fa-circle-dot {
+    font-size: 15px;
+    color: white;
+    align-self: center;
+    margin-right: 1vw;
+    filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white);
+}
+.name-icon{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.name-infos{
+    text-align: center;
+    margin: 0;
+}
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 5%;
+}
+
+
+
+@media only screen and (max-width : 1024px) {
+
+    h1 {
+        font-size: 90px;
+
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .fa-circle-dot {
+        font-size: 10px;
+    }
+
+}
+
+@media only screen and (max-width : 500px) {
+
+    h1 {
+        font-size: 65px;
+
+}}
+
+
+@keyframes letter-fade-in {
+from {
+    width: 0;
+}
+to {
+    width: 100%;
+}
+}
+
+@keyframes neon-glow {
+    0% {
+        filter: drop-shadow(0 0 10px white)
+    }
+    100% {
+        filter: drop-shadow(0 0 30px white)
+    }
+}

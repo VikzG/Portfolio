@@ -1,0 +1,21 @@
+.techs-gallery{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 5px;
+    margin-top: 3%;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .techs-gallery {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 26%;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
