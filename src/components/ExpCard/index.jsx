@@ -9,7 +9,7 @@ const isArtTitle = title === "Graphic Design";
 
 
   return (
-    <div className='exp-card-container animate__animated animate__fadeInRight'>
+    <div className='exp-card-container'>
       <div className="exp-gallery_card">
        <div className="title-icone-style"><h3 className='exp-card_title'>{title}</h3>
         {isArtTitle ? (

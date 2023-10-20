@@ -3,9 +3,10 @@ import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 
 function Header() {
+  const [isTitleUp, setIsTitleUp] = useState(0);
   const location = useLocation();
   let pageTitle;
 
@@ -19,14 +20,27 @@ function Header() {
     pageTitle = "DIGITAL\nDESIGNER";
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsTitleUp(-scrollY / -4);
+    };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  
+  })
+
 
   return (
     <div className='main-header'>
       <div className="name-icon">
-        <FontAwesomeIcon icon={faCircleDot} className="animate__animated animate__flip" /> 
-        <h2 className="name-infos">Bouzemame Jérémy</h2>
+        <FontAwesomeIcon icon={faCircleDot}/> 
+        <h2 className="name-infos">Jérémy B.</h2>
       </div>
-      <h1 className="animate__animated animate__fadeInDown">
+      <h1 style ={{ transform: `translateY(${isTitleUp}px)` }}>
         {pageTitle.split("\n").map((line, index) => (
           <Fragment key={index}>
             {line}

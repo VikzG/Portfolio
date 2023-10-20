@@ -5,7 +5,7 @@ import techdatas from '../Techsdata/index';
 export default function TechsGallery() {
 
     return (
-        <main className='techs-gallery animate__animated animate__fadeIn'>
+        <main className='techs-gallery animate__animated animate__fadeInUp'>
                         {techdatas.map(data => {
                 return (
                     <TechsCard

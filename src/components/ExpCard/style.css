@@ -29,6 +29,7 @@
     font-weight: 500;
     font-size: 23px;
     color: white;
+    animation: faded 2s ease-in;
 }
 
 .title-icone-style{
@@ -36,6 +37,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
+    animation: faded 1s ease-in;
 }
 
 @media screen and (max-width: 1024px) {

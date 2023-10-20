@@ -2,8 +2,9 @@
     background-color: black;
     margin: 0;
     padding: 0;
-    height: 100%; /* Pour occuper toute la hauteur de l'écran */
-  }
+    scroll-behavior: smooth;
+ /* Pour occuper toute la hauteur de l'écran */
+}
 
 .photo-presentation{
     display: flex;
@@ -13,11 +14,10 @@
 }
 
 .my-photo-container{
-    width: 60%;
+    width: 50%;
     height: 100%;
     margin: auto;
     padding: 3%;
-    transition: transform 0.5s ease-in-out;
 }
 
 .my-photo-container img {
@@ -26,7 +26,6 @@
     object-fit: cover;
     object-position: center;
     border-radius: 10px;
-    transition: transform 0.3s ease-in-out
 }
 
 
