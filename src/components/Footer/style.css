@@ -40,11 +40,11 @@
   @keyframes underline {
     0% {
         width: 0;
-        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
+        filter: drop-shadow(0 0 10px white);
     }
     100% {
         width: 100%;
-        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
+        filter: drop-shadow(0 0 10px white);
     }
 }
 

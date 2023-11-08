@@ -11,7 +11,7 @@ h1 {
     font-weight: 800;
     font-family: 'Inter Tight', sans-serif;
     color: white;
-    line-height: 90%;
+    line-height: 70%;
     letter-spacing: -5px;
 }
 
@@ -21,7 +21,8 @@ h2 {
     font-family: 'Share Tech', sans-serif;
     font-weight: 400;
     font-size: 25px;
-    animation: faded 2s ease-in;
+    animation-delay: 5s;
+    animation: faded 1s ease-in;
 }
 
 .fa-circle-dot {
@@ -30,6 +31,7 @@ h2 {
     align-self: center;
     margin-right: 1vw;
     filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white);
+    animation: glitch 3s infinite;
 }
 .name-icon{
     display: flex;
@@ -81,7 +83,7 @@ h2 {
     }
 }
 
-@keyframes faded {
+    @keyframes faded {
     from {
         opacity: 0;
     }
@@ -90,7 +92,16 @@ h2 {
     }
     }
 
-@keyframes letter-fade-in {
+    @keyframes faded-out {
+        from {
+            opacity: 100%;
+        }
+        to {
+            opacity: 0%;
+        }
+        }
+
+    @keyframes letter-fade-in {
 from {
     width: 0;
 }
@@ -99,7 +110,7 @@ to {
 }
 }
 
-@keyframes neon-glow {
+    @keyframes neon-glow {
     0% {
         filter: drop-shadow(0 0 10px white)
     }
@@ -107,3 +118,26 @@ to {
         filter: drop-shadow(0 0 30px white)
     }
 }
+
+@keyframes glitch {
+    0%, 5% {
+      transform: translate(0, 0);
+      opacity: 100%;
+    }
+    1% {
+      transform: translate(-5%, -10%);
+      opacity: 50%;
+    }
+    2% {
+      transform: translate(10%, 30%);
+      opacity: 20%;
+    }
+    3%{
+      transform: translate(-43%, 10%);
+      opacity: 50%;
+    }
+    4% {
+      transform: translate(2%, -23%);
+      opacity: 20%;
+    }
+  }

@@ -1,53 +1,65 @@
 import './style.css';
-import 'animate.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
-import React, { Fragment, useState, useEffect } from 'react';
+import { motion } from "framer-motion";
+import React, { Fragment } from 'react';
 
 function Header() {
-  const [isTitleUp, setIsTitleUp] = useState(0);
   const location = useLocation();
   let pageTitle;
+  let pageSubtitle;
+  let name;
+
 
   if (location.pathname === "/experiences") {
     pageTitle = "EXPERIENCES";
+    name = "my formations";
   } else if (location.pathname === "/works") {
     pageTitle = "WORKS";
+    name = "The works i've done";
   } else if (location.pathname === "/techs") {
     pageTitle = "TECHS";
+    name = "The tools i use"
   } else {
-    pageTitle = "DIGITAL\nDESIGNER";
+    pageTitle = "WEB";
+    pageSubtitle = "DESIGNER"
+    name = "Jérémy B.";
   }
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setIsTitleUp(-scrollY / -4);
-    };
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
   
-  })
-
-
   return (
     <div className='main-header'>
       <div className="name-icon">
         <FontAwesomeIcon icon={faCircleDot}/> 
-        <h2 className="name-infos">Jérémy B.</h2>
+        <h2 className="name-infos">{name}</h2>
       </div>
-      <h1 style ={{ transform: `translateY(${isTitleUp}px)` }}>
+      <motion.h1
+            initial={{ opacity: 0, transform: "translateY(-40px)" }}
+            animate={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01]
+            }}
+      >
         {pageTitle.split("\n").map((line, index) => (
           <Fragment key={index}>
             {line}
             <br />
           </Fragment>
         ))}
-      </h1>
+      </motion.h1>
+      <motion.h1
+              initial={{ opacity: 0, transform: "translateY(-40px)" }}
+              animate={{ opacity: 1, transform: "translateY(0px)"}}
+              transition={{
+                duration: 0.8,
+                delay: 0.8,
+                ease: [0, 0.71, 0.2, 1.01]
+              }}
+      >
+        {pageSubtitle}
+      </motion.h1>
     </div>
   );
 }

@@ -5,7 +5,7 @@ import Card from "../Card"
 export default function Gallery() {
 
     return (
-        <main className='home_gallery animate__animated animate__fadeInUp'>
+        <main className='home_gallery'>
                         {datas.map(data => {
                 return (
                     <Card

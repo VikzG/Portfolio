@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSitemap } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,24 +18,81 @@ function Navigation() {
 
   return (
     <nav className='main-nav'>
-      <Link to="/" className="animate__animated animate__fadeInLeft main-nav-top">
-        <FontAwesomeIcon icon={faSitemap} /> Home
+      <motion.button 
+      className="main-nav-top"
+      initial={{ opacity: 0, transform: "translateY(-50px)" }}
+      animate={{ 
+      opacity: 1,
+      transform: "translateY(0px)",
+          }}
+      transition=
+      {{
+      duration: 1,
+      delay:0,
+      ease: [0, 0.71, 0.2, 1.01],
+      }}
+      >
+      <FontAwesomeIcon icon={faSitemap} />
+      <Link to="/">
+         Home
       </Link>
-      <button className="animate__animated animate__fadeInTopRight main-nav-menu" onClick={handleModalOpen}>
+      </motion.button>
+      <motion.button
+      className="main-nav-menu" 
+      onClick={handleModalOpen}
+      initial={{ opacity: 0, transform: "translateY(-50px)" }}
+      animate={{ 
+      opacity: 1,
+      transform: "translateY(0px)",
+          }}
+      transition=
+      {{
+      duration: 1,
+      delay:0,
+      ease: [0, 0.71, 0.2, 1.01],
+      }}
+      >
         Menu
-      </button>
+      </motion.button>
       {isModalOpen && (
-        <div className="modal animate__animated animate__fadeInDown">
-          <ul className="modal-menu ">
+        <motion.div 
+          className="modal"
+          initial={{ opacity: 0 }}
+          animate={{ 
+          opacity: 1,
+          }}
+          transition=
+          {{
+          duration: 0.5,
+          delay:0,
+          ease: [0, 0.71, 0.2, 1.01],
+          }}
+          >
+          <motion.ul 
+            className="modal-menu "
+            initial={{ 
+              opacity: 0,
+            }}
+            animate={{ 
+              opacity: 1,
+            }}
+            transition=
+            {{
+            duration: 0.3,
+            delay:0.5,
+            ease: [0.5, 0.71, 0.7, 1.01],
+            }}
+            >
             <Link to="/" className="modal-text">About</Link>
             <Link to ="/works"className="modal-text">Works</Link>
             <Link to ="/techs"className="modal-text">Techs</Link>
             <Link to ="/experiences" className="modal-text">Experiences</Link>
-          </ul>
-          <button className="modal-close" onClick={handleModalClose}>
+          </motion.ul>
+          <button className="modal-close"
+           onClick={handleModalClose}>
             [  Close  ]
           </button>
-        </div>
+        </motion.div>
       )}
     </nav>
   );

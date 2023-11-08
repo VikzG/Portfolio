@@ -1,7 +1,20 @@
 import './style.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import ModalBox from '../ModalBox';
+
 
 export default function Card({ title, cover, description,techs, workUrl }) {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
 
   return (
@@ -18,6 +31,8 @@ export default function Card({ title, cover, description,techs, workUrl }) {
 			  ))}
 			</div>
       <p className="card_description">{description}</p>
+      <button onClick={openModal}>Ouvrir la boîte modale</button>
+      <ModalBox isOpen={isModalOpen} onClose={closeModal} />
   </div>
   );
 }

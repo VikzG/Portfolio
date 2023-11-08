@@ -11,7 +11,7 @@ function Works() {
       <div className = "works">
       <Navigation />
       <Header />
-    <Gallery />
+      <Gallery />
       <Footer />
       </div>
     )
