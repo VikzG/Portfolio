@@ -12,21 +12,26 @@ import fight4ex from "../../assets/pdraw.jpg"
 import pfalex1 from "../../assets/pfalex1.jpg"
 import pfalex2 from "../../assets/pfalex2.jpg"
 import pfalex3 from "../../assets/pfalex3.jpg"
+import kasa1 from "../../assets/kasa1.jpg"
+import kasa2 from "../../assets/kasa2.jpg"
+import kasa3 from "../../assets/kasa3.jpg"
+import kasa4 from "../../assets/kasa4.jpg"
 
 const datas = [
 	{
 		"id": "c67ab8a7",
 		"title": "KASA - Real estate agency website",
-		"cover": kasalogo,
+		"cover": kasa1,
 		"description": "I leveraged the power of React and the flexibility of SCSS to develop a website for a real estate agency called Kasa.The website not only showcases the properties offered by Kasa but also provides a seamless and immersive user experience. Through meticulous attention to detail and a focus on user-centric design, I successfully crafted a user-friendly platform.",
 		"techs": [
 			"React",
 			"SASS",
 		],
 		"examples": [
-			fight1ex,
-			fight2ex,
-			fight3ex,
+			kasa1,
+			kasa2,
+			kasa3,
+			kasa4,
 		],
 		"workUrl": 'https://github.com/VikzG/site-de-kasa.git'
 	},
@@ -69,7 +74,7 @@ const datas = [
 		"id": "c67ab8a10",
 		"title": "PORTFOLIO - AleksicDesign (On progress...)",
 		"cover": pfalex1,
-		"description": "In this project, I used HTML, CSS and Javascript to create a simplified 'Street Fighter' style game with the help of a tutorial found on Youtube. This allowed me to discover the different basics of video game creation such as collision management, gravity, sprite use etc...",
+		"description": "This one consists of creating the portfolio of a graphic designer so that he can present his work and his knowledge in the field. Using React in combination with libraries like Framer motion allows me to perform more advanced animations.I’m currently working on it.",
 		"techs": [
 			"React",
 			"SASS",

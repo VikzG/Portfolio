@@ -3,7 +3,7 @@ import "./style.scss";
 
 
 
-const ModalBox = ({ isOpen, onClose,examples,title }) => {
+const ModalBox = ({ isOpen, onClose,examples }) => {
 
     return (
       <AnimatePresence>

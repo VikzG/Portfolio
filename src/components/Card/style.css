@@ -33,7 +33,7 @@
     top: -10px;
     right: 10px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
     color: white;
 }
 
@@ -74,7 +74,7 @@
     font-size: 20px;
     background-color: white;
     color: black;
-    width: 30%;
+    width: 20%;
     height: 50px;
     border-radius: 30px;
     cursor: pointer;
@@ -98,5 +98,6 @@
 
     .open-modal-button{
         margin-top: 20px;
+        width: 50%;
     }
 }

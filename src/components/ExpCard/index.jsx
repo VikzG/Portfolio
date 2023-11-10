@@ -36,11 +36,11 @@ const isInView = useInView(ref, { once: true });
           <motion.div className="art-logo-card"
           initial={{ 
             opacity: 0,
-            transform: "translateX(150px)",
+            scale: 0.2,
           }}
           animate={{ 
             opacity: isInView ? 1 : 0,
-            transform: isInView ? "translateX(0px)": "translateX(150px)"
+            scale: isInView ? 1 : 0.2,
            }}
           transition={{
             duration: 0.5,
@@ -51,11 +51,11 @@ const isInView = useInView(ref, { once: true });
           <motion.div className="web-logo-card"
           initial={{ 
             opacity: 0,
-            transform: "translateX(150px)",
+            scale: 0.2,
           }}
           animate={{ 
             opacity: isInView ? 1 : 0,
-            transform: isInView ? "translateX(0px)": "translateX(150px)"
+            scale: isInView ? 1 : 0.2
            }}
           transition={{
             duration: 0.5,
@@ -73,7 +73,7 @@ const isInView = useInView(ref, { once: true });
            }}
           transition={{
             duration: 0.8,
-            delay: 1,
+            delay: 1.3,
           }}
         >{description}
         </motion.p>
