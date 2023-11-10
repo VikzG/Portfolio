@@ -6,6 +6,7 @@ import Works from "./pages/Works"
 import Techs from './pages/Techs';
 import Experiences from './pages/Experiences';
 import Loader from './components/Loader';
+import Error from "./pages/Error";
 import Lenis from '@studio-freight/lenis'
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
 	{
 		path: "/experiences",
 		element: <Experiences />
+	},
+	{
+		path: "*",
+		element: <Error />
 	},
 ]);
 

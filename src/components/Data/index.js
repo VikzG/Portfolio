@@ -1,4 +1,3 @@
-import kasalogo from "../../assets/Logokasa.png"
 import ohmyfoodcover from "../../assets/ohmyfoodcover.jpg"
 import omf1 from "../../assets/ohmyfood1.jpg"
 import omf2 from "../../assets/ohmyfood2.jpg"
