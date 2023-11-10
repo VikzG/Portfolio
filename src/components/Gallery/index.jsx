@@ -16,10 +16,10 @@ export default function Gallery() {
                         description={data.description}
                         techs={data.techs}
                         workUrl={data.workUrl}
+                        examples={data.examples}
                     />
-                )
-            })}
-
-        </main>
+                    )
+                })}
+         </main>
     )
 }

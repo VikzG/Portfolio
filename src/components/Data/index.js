@@ -1,6 +1,17 @@
 import kasalogo from "../../assets/Logokasa.png"
 import ohmyfoodcover from "../../assets/ohmyfoodcover.jpg"
+import omf1 from "../../assets/ohmyfood1.jpg"
+import omf2 from "../../assets/ohmyfood2.jpg"
+import omf3 from "../../assets/ohmyfood3.jpg"
+import omf4 from "../../assets/ohmyfood4.jpg"
 import fighting_game from "../../assets/fight_game.jpg"
+import fight1ex from "../../assets/hit.jpg"
+import fight2ex from "../../assets/p1win.jpg"
+import fight3ex from "../../assets/p2win.jpg"
+import fight4ex from "../../assets/pdraw.jpg"
+import pfalex1 from "../../assets/pfalex1.jpg"
+import pfalex2 from "../../assets/pfalex2.jpg"
+import pfalex3 from "../../assets/pfalex3.jpg"
 
 const datas = [
 	{
@@ -11,6 +22,11 @@ const datas = [
 		"techs": [
 			"React",
 			"SASS",
+		],
+		"examples": [
+			fight1ex,
+			fight2ex,
+			fight3ex,
 		],
 		"workUrl": 'https://github.com/VikzG/site-de-kasa.git'
 	},
@@ -23,6 +39,12 @@ const datas = [
 			"HTML",
 			"SASS"
 		],
+		"examples": [
+			omf1,
+			omf2,
+			omf3,
+			omf4,
+		],
 		"workUrl": 'https://github.com/VikzG/Projet-OHMYFOOD.git'
 	},
 
@@ -34,7 +56,28 @@ const datas = [
 		"techs": [
 			"HTML",
 			"CSS",
-			"Javascript"
+			"Javascript"],
+		"examples": [
+			fight1ex,
+			fight2ex,
+			fight3ex,
+			fight4ex,
+		],
+	},
+
+	{
+		"id": "c67ab8a10",
+		"title": "PORTFOLIO - AleksicDesign (On progress...)",
+		"cover": pfalex1,
+		"description": "In this project, I used HTML, CSS and Javascript to create a simplified 'Street Fighter' style game with the help of a tutorial found on Youtube. This allowed me to discover the different basics of video game creation such as collision management, gravity, sprite use etc...",
+		"techs": [
+			"React",
+			"SASS",
+		],
+		"examples": [
+			pfalex1,
+			pfalex2,
+			pfalex3,
 		],
 	},
 ]

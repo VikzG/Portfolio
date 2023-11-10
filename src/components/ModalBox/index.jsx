@@ -3,7 +3,8 @@ import "./style.scss";
 
 
 
-const ModalBox = ({ isOpen, onClose }) => {
+const ModalBox = ({ isOpen, onClose,examples,title }) => {
+
     return (
       <AnimatePresence>
         {isOpen && (
@@ -22,21 +23,15 @@ const ModalBox = ({ isOpen, onClose }) => {
             transition={{ duration: 0.3 }}
             >
               <button
-                className='M'
-                style={{
-                  position: 'absolute',
-                  top: 5,
-                  right: 5,
-                  background: 'none',
-                  border: 'none',
-                  cursor: 'pointer',
-                }}
+                className='modal-box-button'
                 onClick={onClose}
               >
-                X
+                [  Close  ]
               </button>
-              <h2>Contenu de la boîte modale</h2>
-              <p>Ici, vous pouvez placer tout contenu que vous souhaitez afficher dans la boîte modale.</p>
+              {examples &&
+              examples.map((example, index) => (
+              <img key={index} src={example} alt={`Example ${index}`} />
+              ))}
             </motion.div>
           </motion.div>
         )}

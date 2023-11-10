@@ -1,19 +1,54 @@
 
 .modal-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;    
     position:fixed;
+    border: 1rem solid;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: 'rgba(0, 0, 0, 0.5)';
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+
 
 &-content {
     background: white;
     padding: 20px;
+    max-height: 85%;
+    gap: 10px;
     border-radius: 10px;
-    position: relative,
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow:scroll;
+}
+
+&-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    background:none;
+    color: white;
+    border: none;
+    cursor: pointer;
     }
 }
+
+.modal-box img {
+    object-fit: cover;
+    object-position: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+    .modal-box-content {
+        max-height: 75%;
+    }
+}
+
