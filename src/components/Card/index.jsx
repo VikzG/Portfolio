@@ -78,10 +78,18 @@ export default function Card({ title, cover, description,techs, workUrl,examples
       animate={{ 
         opacity: isInView ? 1 : 0,
         scale: isInView ? 1 : 0,
+        transition: {
+          duration: 0.5,
+          delay: 1.2,
+        }
        }}
-      transition={{
-        duration: 0.5,
-        delay: 1.2,
+       whileHover={{ 
+        width: 1000,
+        transition: 
+        { duration: 0.3,
+          delay: 0,
+        }
+       // Ajoutez ici le delay spécifique pour le hover
       }}
       >
         Check it

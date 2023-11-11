@@ -71,7 +71,7 @@ const datas = [
 
 	{
 		"id": "c67ab8a10",
-		"title": "PORTFOLIO - AleksicDesign (On progress...)",
+		"title": "PORTFOLIO - AleksicDesign (In progress...)",
 		"cover": pfalex1,
 		"description": "This one consists of creating the portfolio of a graphic designer so that he can present his work and his knowledge in the field. Using React in combination with libraries like Framer motion allows me to perform more advanced animations.I’m currently working on it.",
 		"techs": [
