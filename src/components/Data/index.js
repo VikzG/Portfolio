@@ -60,7 +60,8 @@ const datas = [
 		"techs": [
 			"HTML",
 			"CSS",
-			"Javascript"],
+			"Javascript"
+		],
 		"examples": [
 			fight1ex,
 			fight2ex,

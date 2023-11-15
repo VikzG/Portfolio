@@ -20,19 +20,19 @@ export default function Card({ title, cover, description,techs, workUrl,examples
 
   return (
     <motion.div 
-    className='card-container'>
+    className='card-container'
+    ref={ref}
+    >
       <Link
         to={workUrl}
         className="gallery_card">
         <motion.img src={cover} alt={title}
-            initial={{ opacity: 0  }}
-            animate={{ 
-              opacity: isInView ? 1 : 0,
-             }}
-            transition={{
-              duration: 0.5,
-              delay: 0,
-            }} />
+        style={{
+          transform: isInView ? "none" : "translateY(-100px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.5s 0s",
+            }}
+            />
         <motion.h3 className='card_title'
           initial={{ opacity: 0, translateY:-100  }}
           animate={{ 
@@ -49,7 +49,6 @@ export default function Card({ title, cover, description,techs, workUrl,examples
 			  {techs && techs.map((techs, index) => (
 				<motion.button 
         key={index} 
-        ref={ref}
         className="techs_button"
         style={{
           transform: isInView ? "none" : "translateX(100px)",
@@ -85,11 +84,10 @@ export default function Card({ title, cover, description,techs, workUrl,examples
        }}
        whileHover={{ 
         width: 1000,
-        transition: 
-        { duration: 0.3,
+        transition: { 
+          duration: 0.3,
           delay: 0,
         }
-       // Ajoutez ici le delay spécifique pour le hover
       }}
       >
         Check it

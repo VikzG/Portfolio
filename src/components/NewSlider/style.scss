@@ -1,0 +1,17 @@
+.carousel img{
+    max-height: 83vh;
+    max-width: 88vw;
+}
+
+.control-arrow {
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+.carousel .slide img {
+    width: 95vw;
+    height: 40vh;
+}
+
+
+}

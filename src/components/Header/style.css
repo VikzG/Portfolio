@@ -13,6 +13,8 @@ h1 {
     color: white;
     line-height: 70%;
     letter-spacing: -5px;
+    animation: glitch 4s infinite;
+    filter: drop-shadow(0 0 8px white);
 }
 
 

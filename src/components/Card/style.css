@@ -23,7 +23,6 @@
     object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease-in-out;
-    filter: brightness(0.5);
 }
 
 .card_title {

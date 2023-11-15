@@ -1,9 +1,10 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import NewSlider from '../NewSlider';
 import "./style.scss";
 
 
 
-const ModalBox = ({ isOpen, onClose,examples }) => {
+const ModalBox = ({ isOpen, onClose,examples,id }) => {
 
     return (
       <AnimatePresence>
@@ -28,10 +29,7 @@ const ModalBox = ({ isOpen, onClose,examples }) => {
               >
                 [  Close  ]
               </button>
-              {examples &&
-              examples.map((example, index) => (
-              <img key={index} src={example} alt={`Example ${index}`} />
-              ))}
+              <NewSlider examples={examples} id={id}/>
             </motion.div>
           </motion.div>
         )}
