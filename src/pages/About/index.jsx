@@ -91,7 +91,7 @@ function About() {
         transition=
         {{
         duration: 1,
-        delay: 1.5,
+        delay: 1,
         }}
         >
         I'm Jeremy, a web and graphic designer. Passionate about the world of technology and drawing since a young age, I began by pursuing a bachelor's degree in the field of visual communication. Later, I made the decision to train in web development to get as close as possible to what I love. I am now actively seeking opportunities to combine my artistic creativity with my technical skills.
