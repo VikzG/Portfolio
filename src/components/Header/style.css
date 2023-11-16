@@ -127,19 +127,19 @@ to {
       opacity: 100%;
     }
     1% {
-      transform: translate(-5%, -10%);
+      transform: translate(-3%, -6%);
       opacity: 50%;
     }
     2% {
-      transform: translate(10%, 30%);
+      transform: translate(6%, 18%);
       opacity: 20%;
     }
     3%{
-      transform: translate(-43%, 10%);
+      transform: translate(-20%, 6%);
       opacity: 50%;
     }
     4% {
-      transform: translate(2%, -23%);
+      transform: translate(2%, -11%);
       opacity: 20%;
     }
   }
