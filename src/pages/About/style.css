@@ -33,7 +33,8 @@
     color: grey;
     font-family: 'Share Tech', sans-serif;
     text-align: center;
-    font-size: 2.5vw
+    font-size: 2.5vw;
+    animation: glitch 4s infinite;
 }
 
 .presentation-text{
