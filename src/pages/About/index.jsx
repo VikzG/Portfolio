@@ -3,8 +3,8 @@ import Navigation from "../../components/Navigation";
 import Header from "../../components/Header";
 import myPhoto from "../../assets/photo_portfolio.jpg";
 import Footer from "../../components/Footer";
-import { useRef,useEffect,useState } from 'react';
-import { motion , useInView} from "framer-motion";
+import { useRef } from 'react';
+import { motion , useInView, useScroll } from "framer-motion";
 import Particle from '../../components/Particle/Particle';
 
 
@@ -12,19 +12,8 @@ function About() {
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const { scrollYProgress } = useScroll();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
  
 
       return (
@@ -46,19 +35,23 @@ function About() {
           delay: 1.5,
           ease: [0, 0.71, 0.2, 1.01],
           }}
-          >"DESIGN IS THE VISIBLE REFLECTION<br/>OF THE INVISIBLE THINKING."
+          >"DESIGN IS THE <span className='anim-word'>VISIBLE</span> REFLECTION<br/>OF THE <span className='anim-word-2'>INVISIBLE</span> THINKING."
           </motion.span>
         <motion.div 
         className="my-photo-container"
         initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
+        animate={{ opacity: 1,
+           scale: 1 }}
         transition={{
           duration: 1,
           delay: 1,
           ease: [0, 0.71, 0.2, 1.01]
         }}
         >
-        <img className = "my-photo" src={myPhoto} alt="my photo" />
+        <motion.img className = "my-photo" 
+        src={myPhoto}
+        alt="my photo" 
+        />
         </motion.div>
           <motion.span
           className=' presentation-words'
@@ -74,7 +67,7 @@ function About() {
           ease: [0, 0.71, 0.2, 1.01],
           }}
           >
-        "CODE IS POETRY IN MOTION."
+        "<span className='anim-word-3'>CODE </span>IS POETRY IN <span className='anim-word-4'>MOTION</span>."
           </motion.span >
         </div>
         <motion.p 

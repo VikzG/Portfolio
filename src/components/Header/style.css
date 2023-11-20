@@ -142,3 +142,26 @@ to {
       opacity: 20%;
     }
   }
+
+  @-webkit-keyframes glitch {
+    0%, 5% {
+       -webkit-transform: translate(0, 0);
+       opacity: 100%;
+    }
+    1% {
+       -webkit-transform: translate(-3%, -6%);
+       opacity: 50%;
+    }
+    2% {
+       -webkit-transform: translate(6%, 18%);
+       opacity: 20%;
+    }
+    3%{
+       -webkit-transform: translate(-20%, 6%);
+       opacity: 50%;
+    }
+    4% {
+       -webkit-transform: translate(2%, -11%);
+       opacity: 20%;
+    }
+ }

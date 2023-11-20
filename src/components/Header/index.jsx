@@ -2,11 +2,12 @@ import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
-import { motion } from "framer-motion";
+import { motion,useScroll } from "framer-motion";
 import React, { Fragment } from 'react';
 
 function Header() {
   const location = useLocation();
+  const { scrollYProgress } = useScroll();
   let pageTitle;
   let pageSubtitle;
   let name;
@@ -26,6 +27,7 @@ function Header() {
     pageSubtitle = "DESIGNER"
     name = "Jérémy B.";
   }
+  
   
   return (
     <div className='main-header'>

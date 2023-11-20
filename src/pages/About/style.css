@@ -18,14 +18,15 @@
     height: 100%;
     margin: auto;
     padding: 3%;
+    z-index: 10;
 }
 
 .my-photo-container img {
-    width: 100%;;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%
+    border-radius: 50%;
 }
 
 
@@ -33,8 +34,20 @@
     color: grey;
     font-family: 'Share Tech', sans-serif;
     text-align: center;
-    font-size: 2.5vw;
+    font-size: 2vw;
+}
+
+.anim-word{
     animation: glitch 4s infinite;
+}
+.anim-word-2{
+    animation: glitch 3s infinite;
+}
+.anim-word-3{
+    animation: glitch 7s infinite;
+}
+.anim-word-4{
+    animation: glitch 6s infinite;
 }
 
 .presentation-text{
