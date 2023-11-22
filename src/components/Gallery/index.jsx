@@ -15,7 +15,6 @@ export default function Gallery() {
                         cover={data.cover}
                         description={data.description}
                         techs={data.techs}
-                        workUrl={data.workUrl}
                         examples={data.examples}
                     />
                     )

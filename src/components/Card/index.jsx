@@ -4,7 +4,7 @@ import { useState,useRef } from 'react';
 import { motion,useInView } from 'framer-motion';
 import ModalBox from '../ModalBox';
 
-export default function Card({ title, cover, description,techs, workUrl,examples}) {
+export default function Card({ title, cover, description,techs, examples}) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -21,10 +21,8 @@ export default function Card({ title, cover, description,techs, workUrl,examples
   return (
     <motion.div 
     className='card-container'
-    ref={ref}
-    >
+    ref={ref}>
       <Link
-        to={workUrl}
         className="gallery_card">
         <motion.img src={cover} alt={title}
         style={{

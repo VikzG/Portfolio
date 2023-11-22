@@ -121,9 +121,13 @@
     
   }
   .modal-text:hover {
-    filter: blur(10px);
-    
+    filter: blur(10px);    
 }
+
+.modal-open {
+    height: 100vh;
+    overflow-y: hidden !important;
+  }
   
   .modal-close {
     position: absolute;
