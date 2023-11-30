@@ -2,8 +2,7 @@ import React, { useState,useEffect } from 'react';
 import './style.scss';
 import { Link } from 'react-router-dom';
 import { motion,AnimatePresence } from "framer-motion";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSitemap } from '@fortawesome/free-solid-svg-icons';
+import mylogo from "../../assets/logo_jeremy.png";
 
 function Navigation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -46,9 +45,8 @@ function Navigation() {
       ease: [0, 0.71, 0.2, 1.01],
       }}
       >
-      <FontAwesomeIcon icon={faSitemap} />
-      <Link to="/">
-         Home
+        <Link to ="/">
+      <motion.img className="my-logo" src={mylogo} alt="mon logo"/>
       </Link>
       </motion.button>
       <motion.button
@@ -66,7 +64,9 @@ function Navigation() {
       ease: [0, 0.71, 0.2, 1.01],
       }}
       >
+        <p className='my-menu'>
         Menu
+        </p>
       </motion.button>
       <AnimatePresence>
       {isModalOpen && (
