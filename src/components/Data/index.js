@@ -3,11 +3,6 @@ import omf1 from "../../assets/ohmyfood1.jpg"
 import omf2 from "../../assets/ohmyfood2.jpg"
 import omf3 from "../../assets/ohmyfood3.jpg"
 import omf4 from "../../assets/ohmyfood4.jpg"
-import fighting_game from "../../assets/fight_game.jpg"
-import fight1ex from "../../assets/hit.jpg"
-import fight2ex from "../../assets/p1win.jpg"
-import fight3ex from "../../assets/p2win.jpg"
-import fight4ex from "../../assets/pdraw.jpg"
 import pfalex1 from "../../assets/pfalex1.jpg"
 import pfalex2 from "../../assets/pfalex2.jpg"
 import pfalex3 from "../../assets/pfalex3.jpg"
@@ -32,7 +27,7 @@ const datas = [
 			kasa3,
 			kasa4,
 		],
-		"workUrl": 'https://github.com/VikzG/site-de-kasa.git'
+		"workUrl": 'https://kasa-home-website.netlify.app/'
 	},
     {
 		"id": "c67ab8a8",
@@ -49,25 +44,7 @@ const datas = [
 			omf3,
 			omf4,
 		],
-		"workUrl": 'https://github.com/VikzG/Projet-OHMYFOOD.git'
-	},
-
-	{
-		"id": "c67ab8a9",
-		"title": "MY FIGHT GAME",
-		"cover": fighting_game,
-		"description": "In this project, I used HTML, CSS and Javascript to create a simplified 'Street Fighter' style game with the help of a tutorial found on Youtube. This allowed me to discover the different basics of video game creation such as collision management, gravity, sprite use etc...",
-		"techs": [
-			"HTML",
-			"CSS",
-			"Javascript"
-		],
-		"examples": [
-			fight1ex,
-			fight2ex,
-			fight3ex,
-			fight4ex,
-		],
+		"workUrl": 'https://ohmyfood-restaurant.netlify.app'
 	},
 
 	{
@@ -84,6 +61,7 @@ const datas = [
 			pfalex2,
 			pfalex3,
 		],
+		"workUrl": 'https://aleksdesign-portfolio.netlify.app'
 	},
 ]
 export default datas;

@@ -112,18 +112,18 @@
 
   .modal-text {
     text-decoration: none;
-    font-family: 'Share Tech', sans-serif;
+    font-family: 'Inter Tight', sans-serif;
     color: white;
     text-align: center;
-    font-size: 9vw;
+    font-size: 7vw;
     font-weight: 400;
     padding: 10px;
     cursor: pointer;
-    
+    & a:hover{
+        filter: blur(10px);  
+        transition: filter 200ms ease-in;
+    }
   }
-  .modal-text:hover {
-    filter: blur(10px);    
-}
 
 .modal-open {
     height: 100vh;

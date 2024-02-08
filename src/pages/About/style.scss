@@ -20,6 +20,7 @@
     margin: auto;
     padding: 3%;
     z-index: 10;
+    overflow: hidden;
 }
 
 .my-photo-container img {
@@ -27,8 +28,45 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
+    border-radius: 25px;
 }
+
+.my-photo-rect-1{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    top: 0;
+}
+.my-photo-rect-2{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    top: 25%;
+}
+.my-photo-rect-3{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    top: 50%;
+}
+.my-photo-rect-4{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    top: 75%;
+}
+.my-photo-rect-5{
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    background-color: black;
+    top: 0;
+}
+
 
 
 .presentation-words{
@@ -56,11 +94,35 @@
     width: 80%;
     font-family: 'Inter Tight', sans-serif;
     text-align: center;
+    height: 30vh;
     font-size: 35px;
     margin: auto;
     padding: 3%;
 }
 
+.clickable-point {
+    position: relative;
+    width: 100%;
+    height: 20px; /* Hauteur du point blanc */
+    margin-top: 20px; /* Marge pour séparer du texte */
+    cursor: pointer;
+  }
+  
+  .point {
+    position: absolute;
+    bottom: -50px; /* Positionne le point au-dessous du texte */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%);
+    width: 40px; /* Largeur du point */
+    height: 40px; /* Hauteur du point */
+    background-color: white;
+    border-radius: 50%;
+    text-transform:uppercase;
+    color: black;
+    text-align: center;
+    line-height: 20px;
+    box-shadow: 0 0 10px white; /* Halo blanc autour du point */
+    animation: pulse 1s infinite alternate; /* Animation pulsante */}
 
 
 
@@ -80,11 +142,31 @@
     }
 
     .presentation-text{
-        font-size: 25px;
-        width: 90%;
-        margin-bottom: 20px;
+        font-size: 23px;
+        margin-bottom: 40px;
         margin-top: 10px;
-        text-align: justify;
+        text-align: center;
     }
 
 }
+
+@media only screen and (max-width : 600px) {
+      
+    .point {
+        bottom: 0; /* Positionne le point au-dessous du texte */
+        left: 45%; /* Centre horizontalement */
+        width: 30px; /* Largeur du point */
+        height: 30px; /* Hauteur du point */
+      }
+
+}
+
+@keyframes pulse {
+    from {
+      transform: scale(1);
+      opacity: 0.5;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 1;
+    }}
