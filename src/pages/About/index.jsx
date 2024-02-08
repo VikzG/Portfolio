@@ -177,8 +177,8 @@ function About() {
             className={`description-txt ${activePhraseIndex >= index ? 'active' : ''}`}
             initial={{ opacity: 0 }}
             animate={{
-              opacity: activePhraseIndex >= index ? 1 : 0,
-              display: activePhraseIndex === index ? 'block' : 'none',
+              opacity: activePhraseIndex >= index && isInView ? 1 : 0,
+              display: activePhraseIndex === index && isInView ? 'block' : 'none',
             }}
             transition={{ duration: 1.2 }}
           >
