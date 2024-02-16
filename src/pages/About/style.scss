@@ -110,6 +110,9 @@
   
   .point {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     bottom: -50px; /* Positionne le point au-dessous du texte */
     left: 50%; /* Centre horizontalement */
     transform: translateX(-50%);
@@ -119,8 +122,6 @@
     border-radius: 50%;
     text-transform:uppercase;
     color: black;
-    text-align: center;
-    line-height: 20px;
     box-shadow: 0 0 10px white; /* Halo blanc autour du point */
     animation: pulse 1s infinite alternate; /* Animation pulsante */}
 
@@ -157,9 +158,7 @@
         left: 45%; /* Centre horizontalement */
         width: 30px; /* Largeur du point */
         height: 30px; /* Hauteur du point */
-      }
-
-}
+}}
 
 @keyframes pulse {
     from {

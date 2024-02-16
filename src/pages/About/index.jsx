@@ -6,6 +6,7 @@ import Footer from "../../components/Footer";
 import { useRef,useState,useEffect } from 'react';
 import { motion , useInView } from "framer-motion";
 import Particle from '../../components/Particle/Particle';
+import { VscDebugRestart } from "react-icons/vsc";
 
 
 function About() {
@@ -192,6 +193,7 @@ function About() {
                 animate={{ 
                   scale: isInView ? 1:0, 
                 }}
+                whileTap={{ scale: 0.9 }}
                 transition= {{
                   duration: 1,
                   delay: 1.5,
@@ -200,7 +202,8 @@ function About() {
         >
         <motion.div className="point"
         onClick={handleClick}
-        >...</motion.div>
+        >{activePhraseIndex === phrases.length - 1 ? <VscDebugRestart /> : '...'}
+        </motion.div>
         </motion.div>
       </motion.div>
       <Footer />
