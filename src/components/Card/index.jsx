@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { motion,useInView } from 'framer-motion';

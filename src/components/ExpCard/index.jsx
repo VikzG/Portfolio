@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { useRef } from "react";
 import { useInView,motion } from "framer-motion";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

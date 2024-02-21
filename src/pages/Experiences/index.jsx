@@ -8,12 +8,12 @@ import ExpGallery from '../../components/ExpGallery';
 function Experiences() {
 
     return (
-      <div className = "experiences">
+      <section className = "experiences">
       <Navigation />
       <Header />
       <ExpGallery/>
       <Footer />
-      </div>
+      </section>
     )
 }
  

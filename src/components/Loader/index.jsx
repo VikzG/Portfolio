@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Triangle } from  'react-loader-spinner'
 import { motion } from "framer-motion";
-import './style.css';
 import Count from '../Count';
+import './style.scss';
+
 
 const Loader = () => {
   const [count, setCount] = useState(0);

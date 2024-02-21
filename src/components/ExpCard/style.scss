@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap");
+
+.exp {
+  &-card-container {
+    display: flex;
+    align-self: center;
+    width: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    &:hover {
+      filter: brightness(1);
+    }
+  }
+  &-gallery_card {
+    align-self: flex-start;
+  }
+  &-card_title {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    color: white;
+  }
+  &-card_description {
+    font-family: "Inter Tight", sans-serif;
+    text-align: start;
+    margin-top: 2%;
+    font-weight: 500;
+    font-size: 23px;
+    color: white;
+  }
+}
+
+.title-icone-style {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+  .exp-card-container {
+    width: 70%;
+  }
+
+  .exp-card_title {
+    font-size: 40px;
+  }
+
+  .exp-card_description {
+    font-size: 18px;
+  }
+}

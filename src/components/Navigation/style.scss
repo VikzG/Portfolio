@@ -1,91 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap");
 
 .main-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 3%;
-}
-
-.main-nav-top{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3%;
+  &-top {
     display: flex;
     justify-content: flex-start;
     font-size: 25px;
     font-weight: 400;
-    font-family: 'Inter Tight', sans-serif;
+    font-family: "Inter Tight", sans-serif;
     background-color: transparent;
     border: none;
-    text-shadow: 0 0 60px rgba(202,228,225,0.8);
+    text-shadow: 0 0 60px rgba(202, 228, 225, 0.8);
     text-decoration: none;
-}
-
-.main-nav-top a{
-    text-decoration: none;
-    color: white;
-}
-
-
-.main-nav-menu{
+    & a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  &-menu {
     display: flex;
     font-size: 26px;
     font-weight: 400;
-    font-family: 'Inter Tight', sans-serif;
+    font-family: "Inter Tight", sans-serif;
     color: white;
     background-color: transparent;
     cursor: pointer;
     border-style: none;
-    transition: 
-    text-decoration 0.3s ease-in;
-}
-
-.my-menu{
-    align-self: flex-start;
-    margin: 0;
-    transition: 
-    filter 0.3s ease-in;
-    &:hover{
-        filter: drop-shadow(0px 0px 5px white);
-    }
-}
-
-.my-logo {
-    max-width: 60px;
-    padding-top: 5px;
-    cursor: pointer;
-    transition: 
-    filter 0.3s ease-in;
-    &:hover{
-        filter: drop-shadow(0 0 5px white);
-    }
-}
-
-@media only screen and (max-width : 1024px) {
-
-    .my-logo {
-        max-width: 40px;
-    }
-}
-
-
-@keyframes underline {
-    0% {
-        width: 0;
-        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
-    }
-    100% {
-        width: 100%;
-        filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white) drop-shadow(0 0 30px white) drop-shadow(0 0 40px white) drop-shadow(0 0 50px white);
-    }
-}
-.fa-sitemap{
-    color: white;
-    margin-right: 5px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.fa-sitemap:hover{
-    transform: rotate(180deg);
+    transition: text-decoration 0.3s ease-in;
+  }
 }
 
 .modal {
@@ -99,45 +45,91 @@
     align-items: center;
     justify-content: center;
     z-index: 11;
-  }
-  
-  .modal-menu {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 20px;
-    border-radius: 5px;
-  }
-
-  .modal-text {
-    text-decoration: none;
-    font-family: 'Inter Tight', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 6vw;
-    font-weight: 400;
-    padding: 10px;
-    cursor: pointer;
-    & a:hover{
-        filter: blur(10px);  
+    &-open {
+      height: 100vh;
+      overflow-y: hidden !important;
+    }
+    &-close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    &-menu {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    &-text {
+      text-decoration: none;
+      font-family: "Inter Tight", sans-serif;
+      color: white;
+      text-align: center;
+      font-size: 6vw;
+      font-weight: 400;
+      padding: 10px;
+      cursor: pointer;
+      & a:hover {
+        filter: blur(10px);
         transition: filter 200ms ease-in;
+      }
     }
   }
-
-.modal-open {
-    height: 100vh;
-    overflow-y: hidden !important;
-  }
   
-  .modal-close {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
+
+.my-menu {
+  align-self: flex-start;
+  margin: 0;
+  transition: filter 0.3s ease-in;
+  &:hover {
+    filter: drop-shadow(0px 0px 5px white);
   }
+}
+
+.my-logo {
+  max-width: 60px;
+  padding-top: 5px;
+  cursor: pointer;
+  transition: filter 0.3s ease-in;
+  &:hover {
+    filter: drop-shadow(0 0 5px white);
+  }
+}
+
+.fa-sitemap {
+  color: white;
+  margin-right: 5px;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .my-logo {
+    max-width: 40px;
+  }
+}
+
+@keyframes underline {
+  0% {
+    width: 0;
+    filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white)
+      drop-shadow(0 0 30px white) drop-shadow(0 0 40px white)
+      drop-shadow(0 0 50px white);
+  }
+  100% {
+    width: 100%;
+    filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white)
+      drop-shadow(0 0 30px white) drop-shadow(0 0 40px white)
+      drop-shadow(0 0 50px white);
+  }
+}
 

@@ -8,12 +8,12 @@ import TechsGallery from '../../components/TechsGallery';
 function Techs() {
 
     return (
-      <div className = "technos">
+      <section className = "techs">
       <Navigation />
       <Header />
       <TechsGallery/>
       <Footer />
-      </div>
+      </section>
     )
 }
  

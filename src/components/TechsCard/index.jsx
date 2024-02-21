@@ -1,4 +1,4 @@
-import './style.css';
+import './style.scss';
 import { useRef } from "react";
 import { useInView,motion } from "framer-motion";
 
@@ -21,7 +21,7 @@ export default function TechsCard({ title, cover,techs, workUrl,category }) {
         to={workUrl}
         className="techs-gallery_card">
         <img src={cover} alt={title} />
-        <motion.h3 className='techs-card_title'
+        <motion.h3 className='techs-card-title'
               initial={{ opacity: 0}}
               animate={{ 
                 opacity: isInView ? 1 : 0,
@@ -32,7 +32,7 @@ export default function TechsCard({ title, cover,techs, workUrl,category }) {
               }}
         >{title}
         </motion.h3>
-        <motion.span className='techs-category'
+        <motion.span className='techs-card-category'
               initial={{ opacity: 0, scale: 0. }}
               animate={{ 
                 opacity: isInView ? 1 : 0,
@@ -45,11 +45,6 @@ export default function TechsCard({ title, cover,techs, workUrl,category }) {
         >{category}
         </motion.span>
       </div>
-      <div className="card_techs">
-			  {techs && techs.map((techs, index) => (
-				<button key={index} className="techs_button">{techs}</button>
-			  ))}
-			</div>
   </motion.div>
   );
 }

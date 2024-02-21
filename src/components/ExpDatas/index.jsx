@@ -1,6 +1,4 @@
 
-
-
 const expDatas = [
 	{
 		"id": "c679989",

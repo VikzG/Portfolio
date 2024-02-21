@@ -8,12 +8,12 @@ import Gallery from '../../components/Gallery';
 function Works() {
 
     return (
-      <div className = "works">
+      <section className = "works">
       <Navigation />
       <Header />
       <Gallery />
       <Footer />
-      </div>
+      </section>
     )
 }
  

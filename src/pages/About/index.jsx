@@ -43,7 +43,7 @@ function About() {
   };
 
       return (
-        <div className = "about"  ref={targetRef}>
+        <section className = "about"  ref={targetRef}>
         <Particle />
         <Navigation />
         <Header />
@@ -207,7 +207,7 @@ function About() {
         </motion.div>
       </motion.div>
       <Footer />
-        </div>
+        </section>
       )
   }
    
