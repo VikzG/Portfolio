@@ -1,9 +1,9 @@
-import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleDot } from '@fortawesome/free-solid-svg-icons';
 import { useLocation } from 'react-router-dom';
 import { motion } from "framer-motion";
 import React, { Fragment } from 'react';
+import './style.scss';
 
 function Header() {
   const location = useLocation();
@@ -29,10 +29,10 @@ function Header() {
   
   
   return (
-    <div className='main-header'>
-      <div className="name-icon">
+    <section className='header'>
+      <div className="header-icon">
         <FontAwesomeIcon icon={faCircleDot}/> 
-        <h2 className="name-infos">{name}</h2>
+        <h2 className="header-infos">{name}</h2>
       </div>
       <motion.h1
             initial={{ opacity: 0, transform: "translateY(-40px)" }}
@@ -61,7 +61,7 @@ function Header() {
       >
         {pageSubtitle}
       </motion.h1>
-    </div>
+    </section>
   );
 }
 

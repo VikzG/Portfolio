@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight&family=Share+Tech&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@700;800&display=swap");
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 5%;
+  &-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    animation: faded 1s ease-in;
+  }
+
+  &-infos {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+h1 {
+  text-align: center;
+  margin: 1%;
+  font-size: 180px;
+  font-weight: 800;
+  font-family: "Inter Tight", sans-serif;
+  color: white;
+  line-height: 70%;
+  letter-spacing: -5px;
+  filter: drop-shadow(0 0 3px white);
+}
+
+h2 {
+  color: white;
+  font-family: "Share Tech", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  animation-delay: 5s;
+  animation: faded 1s ease-in;
+}
+
+.fa-circle-dot {
+  font-size: 15px;
+  color: white;
+  align-self: center;
+  margin-right: 1vw;
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 20px white)
+    drop-shadow(0 0 30px white);
+  animation: glitch 3s infinite;
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .fa-circle-dot {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 60px;
+  }
+  .header {
+    margin-top: 5%;
+  }
+}
+
+@keyframes faded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes faded-out {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+
+@keyframes letter-fade-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes neon-glow {
+  0% {
+    filter: drop-shadow(0 0 10px white);
+  }
+  100% {
+    filter: drop-shadow(0 0 30px white);
+  }
+}
+
+@keyframes glitch {
+  0%,
+  5% {
+    transform: translate(0, 0);
+    opacity: 100%;
+  }
+  1% {
+    transform: translate(-3%, -6%);
+    opacity: 50%;
+  }
+  2% {
+    transform: translate(6%, 18%);
+    opacity: 20%;
+  }
+  3% {
+    transform: translate(-20%, 6%);
+    opacity: 50%;
+  }
+  4% {
+    transform: translate(2%, -11%);
+    opacity: 20%;
+  }
+}
+
+@-webkit-keyframes glitch {
+  0%,
+  5% {
+    -webkit-transform: translate(0, 0);
+    opacity: 100%;
+  }
+  1% {
+    -webkit-transform: translate(-3%, -6%);
+    opacity: 50%;
+  }
+  2% {
+    -webkit-transform: translate(6%, 18%);
+    opacity: 20%;
+  }
+  3% {
+    -webkit-transform: translate(-20%, 6%);
+    opacity: 50%;
+  }
+  4% {
+    -webkit-transform: translate(2%, -11%);
+    opacity: 20%;
+  }
+}

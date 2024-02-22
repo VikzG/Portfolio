@@ -47,9 +47,9 @@ function About() {
         <Particle />
         <Navigation />
         <Header />
-        <div className='photo-presentation'>
+        <div className='about-items'>
           <motion.span 
-          className='presentation-words'
+          className='about-items-quotation'
           initial={{ opacity: 0, transform: "translateX(-50px)" }}
           animate={{ 
           opacity: 1,
@@ -61,10 +61,10 @@ function About() {
           delay: 1.5,
           ease: [0, 0.71, 0.2, 1.01],
           }}
-          >"DESIGN IS THE <span className='anim-word'>VISIBLE</span> REFLECTION<br/>OF THE <span className='anim-word-2'>INVISIBLE</span> THINKING."
+          >"DESIGN IS THE <span className='quotation-animation'>VISIBLE</span> REFLECTION<br/>OF THE <span className='quotation-animation-2'>INVISIBLE</span> THINKING."
           </motion.span>
         <motion.div 
-        className="my-photo-container"
+        className="about-items-photo-container"
         initial={{ 
           opacity: 0,
         }}
@@ -95,7 +95,7 @@ function About() {
         ease: [0, 0.71, 0.8, 1.01],
         }}
         />
-        <motion.div className='my-photo-rect-1'
+        <motion.div className='photo-animation-rectangle'
                 initial={{ 
                   width: "100%",
                 }}
@@ -109,7 +109,7 @@ function About() {
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
-        <motion.div className='my-photo-rect-2'
+        <motion.div className='photo-animation-rectangle-2'
                 initial={{ 
                   width: "100%",
                 }}
@@ -123,7 +123,7 @@ function About() {
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
-        <motion.div className='my-photo-rect-3'
+        <motion.div className='photo-animation-rectangle-3'
                 initial={{ 
                   width: "100%",
                 }}
@@ -137,7 +137,7 @@ function About() {
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
-        <motion.div className='my-photo-rect-4'
+        <motion.div className='photo-animation-rectangle-4'
                 initial={{ 
                   width: "100%",
                 }}
@@ -153,7 +153,7 @@ function About() {
         ></motion.div>
         </motion.div>
           <motion.span
-          className='presentation-words'
+          className='about-items-quotation'
           initial={{ opacity: 0,
              transform: "translateX(50px)" }}
           animate={{ 
@@ -167,11 +167,11 @@ function About() {
           ease: [0, 0.71, 0.2, 1.01],
           }}
           >
-        "<span className='anim-word-3'ref={ref2}>CODE </span>IS POETRY IN <span className='anim-word-4'>MOTION</span>."
+        "<span className='quotation-animation-3'ref={ref2}>CODE </span>IS POETRY IN <span className='quotation-animation-4'>MOTION</span>."
           </motion.span >
         </div>
         <motion.div 
-        className="presentation-text" ref={ref}>
+        className="about-items-text" ref={ref}>
         {phrases.map((phrase, index) => (
           <motion.p
             key={index}
@@ -186,7 +186,7 @@ function About() {
             {phrase}
           </motion.p>
         ))}
-        <motion.div className="clickable-point"
+        <motion.div className="point-container"
                 initial={{ 
                   scale: 0
                 }}
