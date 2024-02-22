@@ -24,7 +24,7 @@ export default function Card({ title, cover, description,techs,workUrl, examples
           transition: "all 0.5s 0s",
             }}
             />
-        <motion.h3 className='card_title'
+        <motion.h3 className='card-title'
           initial={{ opacity: 0, translateY:-100  }}
           animate={{ 
             opacity: isInView ? 1 : 0,
@@ -36,7 +36,7 @@ export default function Card({ title, cover, description,techs,workUrl, examples
           }}
         >{title}</motion.h3>
       </Link>
-      <div className="card_techs">
+      <div className="card-techs">
 			  {techs && techs.map((techs, index) => (
 				<motion.button 
         key={index} 
@@ -49,7 +49,7 @@ export default function Card({ title, cover, description,techs,workUrl, examples
         >{techs}</motion.button >
 			  ))}
 			</div>
-      <motion.p className="card_description"
+      <motion.p className="card-description"
         initial={{ opacity: 0, translateX:100  }}
         animate={{ 
           opacity: isInView ? 1 : 0,

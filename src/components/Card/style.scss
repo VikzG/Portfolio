@@ -24,7 +24,7 @@
 
 
 .card{
-    &_title {
+    &-title {
         z-index: 5;
         position: absolute;
         font-family: 'Share Tech', sans-serif;
@@ -34,7 +34,7 @@
         font-size: 24px;
         color: white;
     }
-    &_description{
+    &-description{
         font-family: 'Inter Tight', sans-serif;
         margin-top: 2%;
         text-align: start;
@@ -42,7 +42,7 @@
         font-size: 18px;
         color: white;
     }
-    &_techs{
+    &-techs{
         display: flex;
         align-items: center;
         gap: 2%;

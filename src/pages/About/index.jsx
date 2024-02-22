@@ -16,9 +16,17 @@ function About() {
   const targetRef = useRef(null);
   const isInView = useInView(ref, { once: true });
   const isInViewRect = useInView(ref2, { once: true });
+  
 
   const [textToShow, setTextToShow] = useState('');
   const [activePhraseIndex, setActivePhraseIndex] = useState(0);
+  const [bigScreen, setBigScreen] = useState(window.innerWidth >= 1025);
+
+  const phrases = [
+    "I'm Jeremy, a web and graphic designer.",
+    "Passionate about the world of technology and drawing since a young age, I began by pursuing a bachelor's degree in the field of visual communication.",
+    "Later, I made the decision to train in web development to get as close as possible to what I love. I am now actively seeking opportunities to combine my artistic creativity with my technical skills.",
+  ];
 
   useEffect(() => {
     setTextToShow(phrases[activePhraseIndex]);
@@ -28,11 +36,17 @@ function About() {
     setTextToShow(phrases[0]);
   }, []);
 
-  const phrases = [
-    "I'm Jeremy, a web and graphic designer.",
-    "Passionate about the world of technology and drawing since a young age, I began by pursuing a bachelor's degree in the field of visual communication.",
-    "Later, I made the decision to train in web development to get as close as possible to what I love. I am now actively seeking opportunities to combine my artistic creativity with my technical skills.",
-  ];
+  useEffect(() => {
+    function handleResize() {
+      setBigScreen(window.innerWidth >= 1025);
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const handleClick = () => {
     if (activePhraseIndex < phrases.length - 1) {
@@ -105,7 +119,7 @@ function About() {
                 transition=
                 {{
                 duration: 0.5,
-                delay: 1.5,
+                delay: bigScreen ? 0.2 : 1.5,
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
@@ -119,7 +133,7 @@ function About() {
                 transition=
                 {{
                 duration: 0.5,
-                delay: 1.7,
+                delay: bigScreen ? 0.4 : 1.7,
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
@@ -133,7 +147,7 @@ function About() {
                 transition=
                 {{
                 duration: 0.5,
-                delay: 1.9,
+                delay: bigScreen ? 0.6 : 1.9,
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
@@ -147,7 +161,7 @@ function About() {
                 transition=
                 {{
                 duration: 0.5,
-                delay: 2.1,
+                delay: bigScreen ? 0.8 : 2.1,
                 ease: [0, 0.71, 0.8, 1.01],
                 }}
         ></motion.div>
