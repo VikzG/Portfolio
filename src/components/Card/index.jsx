@@ -40,7 +40,7 @@ export default function Card({ title, cover, description,techs,workUrl, examples
 			  {techs && techs.map((techs, index) => (
 				<motion.button 
         key={index} 
-        className="techs_button"
+        className="techs-button"
         style={{
           transform: isInView ? "none" : "translateX(100px)",
           opacity: isInView ? 1 : 0,

@@ -15,10 +15,11 @@
         max-height: 400px;
         object-fit: cover;
         object-position: center;
+        filter: brightness(0.5);
         transition: transform 0.3s ease-in-out;
-    }
-    & img:hover {
-        filter: brightness(0.7);
+        &:hover{
+            filter:brightness(0.8);
+        }
     }
 }
 
@@ -27,6 +28,8 @@
     &-title {
         z-index: 5;
         position: absolute;
+        text-align: end;
+        padding: 2%;
         font-family: 'Share Tech', sans-serif;
         top: -10px;
         right: 10px;
@@ -55,7 +58,7 @@
     border-radius: 10px;
 }
 
-.techs_button{
+.techs-button{
     width: 20%;
     height: 30px;
     font-family: 'Share Tech', sans-serif;
@@ -85,12 +88,12 @@
         align-self: center;
     }
 
-    .card_description{
+    .card-description{
        margin-top: 5%;
        font-size: 16px;
     }
 
-    .card_title {
+    .card-title {
         font-size: 17px;
     }
 

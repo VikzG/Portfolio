@@ -15,9 +15,9 @@ const isInView = useInView(ref, { once: true });
 
   return (
     <div className='exp-card-container' ref={ref}>
-      <div className="exp-gallery_card">
+      <div className="exp-gallery-card">
        <div className="title-icone-style">
-        <motion.h3 className='exp-card_title'
+        <motion.h3 className='exp-card-title'
           initial={{ 
             opacity: 0,
             transform: "translateX(-150px)",
@@ -64,7 +64,7 @@ const isInView = useInView(ref, { once: true });
           ><FontAwesomeIcon icon={faCode} /></motion.div>
         )}
         </div>
-        <motion.p className="exp-card_description"
+        <motion.p className="exp-card-description"
           initial={{ 
             opacity: 0,
           }}

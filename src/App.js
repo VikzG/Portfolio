@@ -47,16 +47,15 @@ function App() {
 	  },[])
 
 	useEffect(() => {
-		// Exemple de chargement asynchrone (simulé ici)
 		setTimeout(() => {
-		  setIsLoading(false); // Une fois que les données sont chargées, arrêtez d'afficher le loader
-		}, 2000); // Simule un délai de chargement de 2 secondes
+		  setIsLoading(false);
+		}, 2000); // Délai de chargement de 2 secondes
 	  }, []);
 
 	  return (
 		<div>
 		  {isLoading ? <Loader /> : (
-			// Affichez le contenu de l'application une fois que les données sont chargées
+			// Affiche le contenu de l'application une fois que les données sont chargées
 		<>
 		<RouterProvider router={router}/>
 		</>

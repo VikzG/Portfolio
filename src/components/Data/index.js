@@ -1,15 +1,6 @@
 import ohmyfoodcover from "../../assets/ohmyfoodcover.jpg"
-import omf1 from "../../assets/ohmyfood1.jpg"
-import omf2 from "../../assets/ohmyfood2.jpg"
-import omf3 from "../../assets/ohmyfood3.jpg"
-import omf4 from "../../assets/ohmyfood4.jpg"
 import pfalex1 from "../../assets/pfalex1.jpg"
-import pfalex2 from "../../assets/pfalex2.jpg"
-import pfalex3 from "../../assets/pfalex3.jpg"
 import kasa1 from "../../assets/kasa1.jpg"
-import kasa2 from "../../assets/kasa2.jpg"
-import kasa3 from "../../assets/kasa3.jpg"
-import kasa4 from "../../assets/kasa4.jpg"
 
 const datas = [
 	{
@@ -20,12 +11,6 @@ const datas = [
 		"techs": [
 			"React",
 			"SASS",
-		],
-		"examples": [
-			kasa1,
-			kasa2,
-			kasa3,
-			kasa4,
 		],
 		"workUrl": 'https://kasa-home-website.netlify.app/'
 	},
@@ -38,12 +23,6 @@ const datas = [
 			"HTML",
 			"SASS"
 		],
-		"examples": [
-			omf1,
-			omf2,
-			omf3,
-			omf4,
-		],
 		"workUrl": 'https://ohmyfood-restaurant.netlify.app'
 	},
 
@@ -55,11 +34,6 @@ const datas = [
 		"techs": [
 			"React",
 			"SASS",
-		],
-		"examples": [
-			pfalex1,
-			pfalex2,
-			pfalex3,
 		],
 		"workUrl": 'https://aleksdesign-portfolio.netlify.app'
 	},
