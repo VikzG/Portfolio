@@ -3,6 +3,7 @@ import "./style.scss";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import mylogo from "../../assets/logo_jeremy.png";
+import CyberButton from "../CyberButton";
 
 function Navigation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -45,25 +46,31 @@ function Navigation() {
         }}
       >
         <Link to="/">
-          <motion.img className="my-logo" src={mylogo} alt="mon logo" />
+          <motion.img className="logo" src={mylogo} alt="mon logo" />
         </Link>
       </motion.button>
-      <motion.button
-        className="main-nav-menu"
-        onClick={handleModalOpen}
-        initial={{ opacity: 0, transform: "translateY(-50px)" }}
-        animate={{
-          opacity: 1,
-          transform: "translateY(0px)",
-        }}
-        transition={{
-          duration: 1,
-          delay: 0,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
+      <CyberButton 
+      onClick={handleModalOpen} 
+      ariaLabel="Menu Button"
+      initial={{ opacity: 0, transform: "translateY(-50px)" }}
+      animate={{
+        opacity: 1,
+        transform: "translateY(0px)",
+      }}
+      transition={{
+        duration: 1,
+        delay: 0,
+        ease: [0, 0.71, 0.2, 1.01],
+      }}
       >
-        <p className="my-menu">Menu</p>
-      </motion.button>
+        Menu<span aria-hidden>_</span>
+        <span aria-hidden className="cybr-btn__glitch">
+          Menu
+        </span>
+        <span aria-hidden className="cybr-btn__tag">
+          VKZ
+        </span>
+      </CyberButton>
       <AnimatePresence>
         {isModalOpen && (
           <motion.div

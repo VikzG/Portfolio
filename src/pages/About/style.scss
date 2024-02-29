@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .about-items {
@@ -12,8 +13,8 @@
   justify-content: center;
   &-photo-container {
     position: relative;
-    width: 50%;
     height: 100%;
+    width: 40%;
     margin: auto;
     padding: 3%;
     z-index: 10;
@@ -26,11 +27,27 @@
       border-radius: 25px;
     }
   }
-  &-quotation {
+  &-quotation-1 {
     color: grey;
     font-family: "Share Tech", sans-serif;
     text-align: center;
-    font-size: 2vw;
+    padding: 15px;
+    font-size: 2.5vw;
+    margin-top: 40px;
+    width: 30%;
+    text-align: end;
+    align-self: flex-start;
+  }
+  &-quotation-2 {
+    color: grey;
+    font-family: "Share Tech", sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 2.5vw;
+    text-align: start;
+    align-self: flex-end;
+    margin-bottom: 40px;
+    width: 30%;
   }
   &-text {
     color: white;
@@ -38,7 +55,7 @@
     font-family: "Inter Tight", sans-serif;
     text-align: center;
     height: 30vh;
-    font-size: 35px;
+    font-size: 36px;
     margin: auto;
     padding: 3%;
   }
@@ -91,11 +108,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: -50px; 
-  left: 50%; 
+  bottom: -50px;
+  left: 50%;
   transform: translateX(-50%);
-  width: 40px; 
-  height: 40px; 
+  width: 40px;
+  height: 40px;
   background-color: white;
   border-radius: 50%;
   padding: 0;
@@ -104,7 +121,7 @@
   box-shadow: 0 0 10px white; /* Halo blanc autour du point */
   cursor: pointer;
   animation: pulse 1s infinite alternate;
-  
+
   &-container {
     position: relative;
     width: 100%;
@@ -124,8 +141,19 @@
     &-photo-container {
       width: 70%;
     }
-    &-quotation {
+    &-quotation-1 {
       font-size: 20px;
+      width: 100%;
+      align-self: center;
+      text-align: center;
+      margin-top: 10px
+    }
+    &-quotation-2 {
+      font-size: 20px;
+      width: 100%;
+      margin: 0;
+      align-self: center;
+      text-align: center;
     }
     &-text {
       font-size: 23px;

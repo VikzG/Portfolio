@@ -13,7 +13,7 @@ export default function Card({ title, cover, description,techs,workUrl, examples
     ref={ref}
     >
       <Link
-         className="gallery_card"
+         className="gallery-card"
          to={workUrl}
          target="_blank"  
          >

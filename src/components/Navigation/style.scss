@@ -77,24 +77,15 @@
       padding: 10px;
       cursor: pointer;
       & a:hover {
-        animation: blurred 1000ms infinite;
+        animation: blurred 2000ms infinite;
       }
     }
   }
   
 
-.my-menu {
-  align-self: flex-start;
-  margin: 0;
-  transition: filter 0.3s ease-in;
-  &:hover {
-    filter: drop-shadow(0px 0px 5px white);
-  }
-}
-
-.my-logo {
+.logo {
   max-width: 60px;
-  padding-top: 5px;
+  padding: 10px;
   cursor: pointer;
   transition: filter 0.3s ease-in;
   &:hover {
@@ -112,8 +103,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  .my-logo {
+  .logo {
     max-width: 40px;
+    padding: 22px;
   }
 }
 

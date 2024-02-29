@@ -61,11 +61,11 @@ function About() {
       <Header />
       <div className="about-items">
         <motion.span
-          className="about-items-quotation"
+          className="about-items-quotation-1"
           initial={{ opacity: 0, transform: "translateX(-50px)" }}
           animate={{
-            opacity: 1,
-            transform: "translateX(0px)",
+            opacity: isInViewRect ? 1 : 0,
+            transform: isInViewRect ? "translateX(0px)" : "translateX(-50px)",
           }}
           transition={{
             duration: 1,
@@ -167,11 +167,11 @@ function About() {
           ></motion.div>
         </motion.div>
         <motion.span
-          className="about-items-quotation"
+          className="about-items-quotation-2"
           initial={{ opacity: 0, transform: "translateX(50px)" }}
           animate={{
-            opacity: 1,
-            transform: "translateX(0px)",
+            opacity: isInViewRect ? 1 : 0,
+            transform: isInViewRect ? "translateX(0px)" : "translateX(50px)",
           }}
           transition={{
             duration: 1,

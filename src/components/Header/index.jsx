@@ -27,7 +27,7 @@ function Header() {
   }
 
   return (
-    <section className="header">
+    <header className="header">
       <div className="header-icon">
         <FontAwesomeIcon icon={faCircleDot} />
         <h2 className="header-infos">{name}</h2>
@@ -59,7 +59,7 @@ function Header() {
       >
         {pageSubtitle}
       </motion.h1>
-    </section>
+    </header>
   );
 }
 
