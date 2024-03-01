@@ -205,21 +205,21 @@ function About() {
           </motion.p>
         ))}
         <motion.div
-          className="point-container"
-          initial={{
-            scale: 0,
-          }}
-          animate={{
-            scale: isInView ? 1 : 0,
-          }}
-          whileTap={{ scale: 0.9 }}
-          transition={{
-            duration: 1,
-            delay: 1.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
-          <motion.button className="point" onClick={handleClick}>
+          className="point-container">
+          <motion.button className="point" 
+            onClick={handleClick}
+            initial={{
+              scale: 0,
+            }}
+            animate={{
+              scale: isInView ? 1 : 0,
+            }}
+            transition={{
+              duration: 0.5,
+              delay: 0.8,
+              ease: "linear",
+            }}
+            >
             {activePhraseIndex === phrases.length - 1 ? (
               <VscDebugRestart />
             ) : (

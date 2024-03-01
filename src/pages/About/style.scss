@@ -50,13 +50,18 @@
     width: 30%;
   }
   &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     color: white;
-    width: 80%;
+    width: 50%;
     font-family: "Inter Tight", sans-serif;
     text-align: center;
     height: 30vh;
     font-size: 36px;
     margin: auto;
+    margin-bottom: 5%;
     padding: 3%;
   }
 }
@@ -104,35 +109,37 @@
 }
 
 .point {
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
+  width: 80px;
+  height: 50px;
   background-color: white;
-  border-radius: 50%;
-  padding: 0;
+  border-radius: 10px;
   color: black;
   border: none;
   box-shadow: 0 0 10px white; /* Halo blanc autour du point */
   cursor: pointer;
-  animation: pulse 1s infinite alternate;
+  transition: all 200ms ease-in;
+  &:hover{
+    box-shadow: 0 0 20px white;
+  }
+  &:active{
+    transform: scale(1.3) !important; 
+  }
 
   &-container {
-    position: relative;
-    width: 100%;
-    height: 20px;
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
   }
   & svg {
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
+    opacity: 1;
+    transition: all 200ms ease-in;
   }
 }
+
 
 @media only screen and (max-width: 1024px) {
   .about-items {
@@ -158,6 +165,7 @@
     &-text {
       font-size: 23px;
       margin-bottom: 40px;
+      width: 80%;
       margin-top: 10px;
       text-align: center;
     }
@@ -166,9 +174,7 @@
 
 @media only screen and (max-width: 600px) {
   .point {
-    top: 25%;
-    left: 45%;
-    width: 30px;
+    width: 40px;
     height: 30px;
     & svg {
       width: 1.5em;
