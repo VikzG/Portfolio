@@ -1,6 +1,7 @@
 import ohmyfoodcover from "../../assets/ohmyfoodcover.jpg"
 import pfalex1 from "../../assets/pfalex1.jpg"
 import kasa1 from "../../assets/kasa1.jpg"
+import pkmproject from "../../assets/pokemon-project.jpg"
 
 const datas = [
 	{
@@ -36,6 +37,17 @@ const datas = [
 			"SASS",
 		],
 		"workUrl": 'https://aleksdesign-portfolio.netlify.app'
+	},
+	{
+		"id": "c67ab8a12",
+		"title": "WEBSITE - Season One Pokedex",
+		"cover": pkmproject,
+		"description": "Welcome to my Pokémon Explorer website ! Built with React.js, i've used the Pokémon API to showcase the first 151 Pokémon. Styling and animations are powered by Tailwind CSS and Framer Motion. Dive in and explore the first season of Pokemon.",
+		"techs": [
+			"React",
+			"Tailwind",
+		],
+		"workUrl": 'https://pkm-project-vkz.netlify.app'
 	},
 ]
 export default datas;
